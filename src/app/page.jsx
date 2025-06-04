@@ -18,7 +18,7 @@ useEffect(() => {
         left: 0,
         behavior: 'smooth',
       });
-    }, 6000); 
+    }, 5000); 
 
     return () => clearTimeout(timeout);
   }, []);
