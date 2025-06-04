@@ -59,7 +59,7 @@ useEffect(() => {
 
       <video
         ref={videoRef}
-        src="/media/VIDEO_CAMISETA_WAY_P1.mp4"
+        src="/media/VIDEO_CAMISETA_WAY_P2.mp4"
         className="video-element"
         controls
         playsInline
