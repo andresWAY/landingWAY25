@@ -1,10 +1,39 @@
+'use client';
+
 import Image from "next/image";
 import Marquee from "./componentes/marquee";
 import Selection from "./componentes/selection";
 import SizeSelector from "./componentes/sizeSelector";
 import Footer from "./componentes/footer";
+import { useEffect } from "react";
+import { useRef, useState } from 'react';
 
 export default function HomePage() {
+
+
+useEffect(() => {
+    const timeout = setTimeout(() => {
+      window.scrollBy({
+        top: 500,
+        left: 0,
+        behavior: 'smooth',
+      });
+    }, 6000); 
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+
+
+  const videoRef = useRef(null);
+  const [playing, setPlaying] = useState(false);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setPlaying(true);
+    }
+  };
 
 
 
@@ -14,6 +43,29 @@ export default function HomePage() {
       <main className="landing__master">
 
         <section className="hero">
+
+        <div className="video-wrapper">
+      {!playing && (
+        <div className="video-overlay" onClick={handlePlay}>
+          <Image
+            src="/media/Thumbnail_v2.jpg" // tu imagen de miniatura
+            alt="Miniatura"
+            fill
+            style={{ objectFit: 'cover' }}
+          />
+          <button className="video-play-button">▶</button>
+        </div>
+      )}
+
+      <video
+        ref={videoRef}
+        src="/media/VIDEO_CAMISETA_WAY_P1.mp4"
+        className="video-element"
+        controls
+        playsInline
+      />
+    </div>
+
           <Marquee />
         </section>
   
@@ -25,12 +77,12 @@ export default function HomePage() {
                 como son algunas de nuestras ideas.</p><Image src="/media/rayo.png" alt="Rayo" width={100} height={217} className="rayo"></Image></div>
                 <br></br>
                 <h2>Pero… podemos</h2>
-                <h1><span className="txt_red">conocernos en persona</span></h1>
+                <h1><span className="txt_red">conocernos en persona.</span></h1>
                 <br></br>
                 <p>Que, aunque no lo creas, ganamos.</p>
                 <p>Y podemos hablar de muchas cosas.</p>
                 <h1>De cosas muy <span className="txt_red">Ways</span></h1>
-                <div className="corazon__master"><p>O de lo que sea.</p><Image src="/media/corazon.png" alt="Corazon" width={120} height={106} className="corazon"></Image></div>
+                <div className="corazon__master"><p>o de lo que sea.</p><Image src="/media/corazon.png" alt="Corazon" width={120} height={106} className="corazon"></Image></div>
                 
             </div>
 
@@ -110,7 +162,7 @@ export default function HomePage() {
           
             <div className="camisetas__text">
                 <p>Ah, por cierto. Aquí <span className="txt_red">somos de pensar en todo.</span><br></br>
-                como son algunas de nuestras ideas.<br></br>
+                Como son algunas de nuestras ideas.<br></br>
                 Por eso, también hemos pensado que igual no hemos dado en el clavo con la talla de la camiseta.<br></br>
                 Eso sí. También somos de dejar contento a todos los nuestros.</p><br></br>
 
