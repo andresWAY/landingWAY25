@@ -44,7 +44,7 @@ useEffect(() => {
 
         <section className="hero">
 
-        <div className="video-wrapper">
+        <div className="video-wrapper"> 
       {!playing && (
         <div className="video-overlay" onClick={handlePlay}>
           <Image
