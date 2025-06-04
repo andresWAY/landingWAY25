@@ -124,9 +124,13 @@ table {
         .rayo{
         position: absolute;
         top: 5px;
-        left: 312px;
+        left: 352px;
         width: 15px;
         height: auto;
+
+              @include media900px {
+               left: 312px;
+              }
       }
       }
       
@@ -136,9 +140,13 @@ table {
         .corazon{
         position: absolute;
         bottom: 4px;
-        left: 131px;
+        left: 141px;
         width: 20px;
         height: auto;
+
+              @include media900px {
+               left: 125px;
+              }
       }
       }
       }
@@ -257,8 +265,10 @@ table {
 
 .camisetas__master{
   max-width: 1000px;
-  margin-left: 5vw;
-  margin-right: 5vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5vw;
+  padding-right: 5vw;
   
 
   .camiseta{
@@ -399,12 +409,13 @@ table {
       color: white;
       padding: 1rem 1.5rem;
       border: none;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-family: $evil;
       cursor: pointer;
       transition: all 0.3s ease;
       width: 100%;
       border-radius: 10px;
+      text-transform: uppercase;
     }
     
     .selection-button:hover {

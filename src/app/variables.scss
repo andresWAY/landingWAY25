@@ -12,7 +12,9 @@ $blanco: #ffffff;
 $gris: #666666;
 $rojo-way: #ae263a;
 
-$evil: 'Evil Empire', sans-serif;
+$evil: "veneer-three", sans-serif;
+
+
 $roboto: 'Roboto', sans-serif;
 
 $espacio-xs: 0.5rem;
@@ -50,7 +52,9 @@ $espacio-lg: 4rem;
 
 
 
-
+h1{
+  text-transform: uppercase;
+}
 
 
 //MIXINS RESPONSIVE
