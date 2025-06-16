@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "WAY Landing 2025",
+  title: "Esto no es un regalo - WAY",
   description: "Landing de campaña 2025 para WAY",
 };
 

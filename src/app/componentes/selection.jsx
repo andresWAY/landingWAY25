@@ -10,16 +10,42 @@ export default function Selection({ frase }) {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const finalFrase = frase || form.fraseInput;
-    console.log('Formulario enviado:', {
-      nombre: form.nombre,
-      correo: form.correo,
-      frase: finalFrase,
+
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const finalFrase = frase || form.fraseInput;
+
+  try {
+    const res = await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        nombre: form.nombre,
+        correo: form.correo,
+        frase: finalFrase,
+      }),
     });
-    // Aquí puedes conectar a una API o manejar el envío como necesites
-  };
+
+    if (res.ok) {
+      alert('¡Formulario enviado con éxito!');
+      setForm({ nombre: '', correo: '', fraseInput: '' });
+      setExpanded(false);
+    } else {
+      const data = await res.json();
+      console.error('Error en respuesta:', data);
+      alert('Hubo un error al enviar el formulario. Intenta de nuevo.');
+    }
+  } catch (error) {
+    console.error('Error de red:', error);
+    alert('Hubo un error de red. Intenta de nuevo.');
+  }
+};
+
+
 
   return (
     <div className="selection-container">

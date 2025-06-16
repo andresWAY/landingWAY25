@@ -14,11 +14,11 @@ export default function HomePage() {
 useEffect(() => {
     const timeout = setTimeout(() => {
       window.scrollBy({
-        top: 500,
+        top: 200,
         left: 0,
         behavior: 'smooth',
       });
-    }, 5000); 
+    }, 15000); 
 
     return () => clearTimeout(timeout);
   }, []);
@@ -162,7 +162,6 @@ useEffect(() => {
           
             <div className="camisetas__text">
                 <p>Ah, por cierto. Aquí <span className="txt_red">somos de pensar en todo.</span><br></br>
-                Como son algunas de nuestras ideas.<br></br>
                 Por eso, también hemos pensado que igual no hemos dado en el clavo con la talla de la camiseta.<br></br>
                 Eso sí. También somos de dejar contento a todos los nuestros.</p><br></br>
 

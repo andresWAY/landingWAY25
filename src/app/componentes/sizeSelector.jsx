@@ -14,14 +14,37 @@ export default function SizeSelector() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Formulario enviado:', {
-      talla: tallaSeleccionada,
-      ...form,
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const res = await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        nombre: form.nombre,
+        correo: form.correo,
+        talla: tallaSeleccionada,
+      }),
     });
-    // Aquí puedes enviar datos a un endpoint
-  };
+
+    if (res.ok) {
+      alert('¡Formulario enviado con éxito!');
+      setForm({ nombre: '', correo: '' });
+      setTallaSeleccionada('');
+    } else {
+      const data = await res.json();
+      console.error('Error en respuesta:', data);
+      alert('Hubo un error al enviar el formulario. Intenta de nuevo.');
+    }
+  } catch (error) {
+    console.error('Error de red:', error);
+    alert('Hubo un error de red. Intenta de nuevo.');
+  }
+};
+
 
   return (
     <div className="size-container">
