@@ -241,10 +241,33 @@ table {
       max-width: 80px;
       height: auto;
 			}
-
       
-   
+    }
 
+    .mano__rockera{
+      max-width: 270px;
+      height: 100%;
+
+      @include media900px {
+			max-width: 200px;
+      height: 100%;
+			}
+
+      @include media800px {
+			position: absolute;
+      right: 20px;
+      bottom: -20px;
+      max-width: 100px;
+      height: auto;
+			}
+
+      @include media500px {
+			position: absolute;
+      right: 20px;
+      bottom: -115px;
+      max-width: 80px;
+      height: auto;
+			}
       
     }
 }
@@ -299,8 +322,8 @@ table {
         position: absolute;
         left: 3vw;
         top: -70px;
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
         }
   }
   

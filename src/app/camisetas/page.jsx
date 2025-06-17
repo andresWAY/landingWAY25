@@ -90,7 +90,7 @@ useEffect(() => {
 
             <div className="intro__line"></div>
 
-            <Image src="/media/mano_01.png" alt="Mano rockera" width={400} height={574} className="mano__rock"></Image>
+            <Image src="/media/mano_01.png" alt="Mano rockera" width={400} height={574} className="mano__rockera"></Image>
 
             
         </section>
