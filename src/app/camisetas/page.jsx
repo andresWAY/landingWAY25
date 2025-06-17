@@ -72,17 +72,19 @@ useEffect(() => {
         <section className="intro__master">
 
             <div className="intro__text">
-                <h2>Bueno, pues ya nos conoces.</h2>
-                <div className="rayo__master"><p>Algunas de las caras y también,<br></br>
-                como son algunas de nuestras ideas.</p><Image src="/media/rayo.png" alt="Rayo" width={100} height={217} className="rayo"></Image></div>
+                <h1>¿Qué? ¿Has flipado no?</h1>
                 <br></br>
-                <h2>Pero… podemos</h2>
-                <h1><span className="txt_red">conocernos en persona.</span></h1>
+                <div className="rayo__master"><p>Otro año que te llega un regalo nuestro y es…</p></div>
+                <h2><span className="txt_red">Otra camiseta.</span></h2>
                 <br></br>
-                <p>Que, aunque no lo creas, ganamos.</p>
-                <p>Y podemos hablar de muchas cosas.</p>
-                <h1>De cosas muy <span className="txt_red">Ways</span></h1>
-                <div className="corazon__master"><p>o de lo que sea.</p><Image src="/media/corazon.png" alt="Corazon" width={120} height={106} className="corazon"></Image></div>
+                <div className="rayo__master"><p>Y con lo que le gustan a nuestro director general, <br></br>ya te puedes hacer la idea de lo que será el año que viene.</p></div>
+                <br></br>
+                <h2>Pero bueno,</h2>
+                <p>queríamos que volvieses a saber de nosotros<br></br>porque el año pasado, bueno… </p>
+                <p><span className="txt_red">tonteamos</span> pero, ahí se quedó la cosa.</p>
+                <br></br>
+                <p>Y en un año pasan muchas cosas.</p>
+                <p>Tanto en nuestra agencia como seguro que en tu marca.</p>
                 
             </div>
 
@@ -100,17 +102,16 @@ useEffect(() => {
             <Image src="/media/fresh.png" alt="Fresh" width={400} height={403} className="fresh"></Image>
 
             <div className="selection__text">
-                <div className="s__title"><p>Mira,</p>
-                <p>aquí van algunas que seguro que te gustarán.</p>
-                <p>Y si no, nos puedes proponer tú ¿eh?</p>
-                <h1>ELIGE LA QUE QUIERAS</h1>
+                <div className="s__title"><p>Así que</p>
+                <h1><span className="txt_red">te damos 5<br></br>buenas razones</span></h1>
+                <p>para volvernos a ver o vernos por primera vez…</p>
+                <p>Así eliges a tu gusto.</p>
                 </div>
-                <Selection frase="Quiero saber más sobre este proyecto."></Selection>
-            <Selection frase="Pues yo quiero hablar de lo de ganar premios juntos. Muchos premios."></Selection>
-            <Selection frase="Quiero que me enseñéis esos premios que tan seguros estáis de ganar. Porque entiendo que tendréis ¿no?"></Selection>
-            <Selection frase="¿Quiénes sois? ¿Qué queréis? ¿Tenéis café? ¿Es gratis?"></Selection>
-            <Selection frase="Lo de Melody en Eurovisión… ¿Qué?"></Selection>
-            <Selection frase="Pues yo quiero hablar de… "></Selection>
+                <Selection frase="Me ha molado la cami de este año, os merecéis una quedadita va."></Selection>
+            <Selection frase="¿Qué es eso que ha pasado en un año? Cuenta, cuenta."></Selection>
+            <Selection frase="Pues oye. Qué bueno saber de vosotros porque me venís como anillo al… bueno, como camiseta al cuerpo."></Selection>
+            <Selection frase="Menos mal que lo habéis dicho. Llevaba todo el año pensando en llamaros."></Selection>
+            <Selection frase="Ninguna razón es válida. Ya os digo yo una buena."></Selection>
             </div>
 
 
@@ -161,12 +162,14 @@ useEffect(() => {
 
           
             <div className="camisetas__text">
-                <p>Ah, por cierto. Aquí <span className="txt_red">somos de pensar en todo.</span><br></br>
-                Por eso, también hemos pensado que igual no hemos dado en el clavo con la talla de la camiseta.<br></br>
-                Eso sí. También somos de dejar contento a todos los nuestros.</p><br></br>
+                <p>También es verdad que</p>
+                <h1 style={{ textAlign: 'left' }}><span className="txt_red">hay cosas que no cambian.</span></h1>
+                <p>Y equivocarnos en las tallas, seguramente será una.</p><br></br>
 
-                <p>Así que, si no te queda como un pincel, puedes <span className="txt_red">pedirnos que te enviemos otra camiseta.</span><br></br>
-                De tu talla, digo.</p>
+                <p>Pero puedes pedir otra.<br></br>
+                Que te quede mejor.<br></br>
+                <span className="txt_red">Que tú seguro que aciertas.</span><br></br>
+                Con la camiseta y con nosotros.</p>
             </div>
 
 
