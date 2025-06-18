@@ -11,19 +11,6 @@ import { useRef, useState } from 'react';
 export default function HomePage() {
 
 
-useEffect(() => {
-    const timeout = setTimeout(() => {
-      window.scrollBy({
-        top: 200,
-        left: 0,
-        behavior: 'smooth',
-      });
-    }, 15000); 
-
-    return () => clearTimeout(timeout);
-  }, []);
-
-
 
   const videoRef = useRef(null);
   const [playing, setPlaying] = useState(false);
