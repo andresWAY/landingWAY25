@@ -34,8 +34,11 @@ export default function Footer() {
             <a href="https://estonoesunregalo.agenciaway.es/politica-de-privacidad/" target="_blank" rel="noopener noreferrer"> PRIVACIDAD</a>
             &nbsp; @2025 WAY
           </p>
+          
         </div>
+        
       </div>
+      <a className="foo" href="https://www.ermo.es">Ermo Estudio</a>
     </footer>
   );
 }

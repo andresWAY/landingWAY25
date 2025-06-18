@@ -925,4 +925,16 @@ table {
 
 
 
+.foo
+{
+  
+  cursor: inherit;
+  display: flex;
+  margin-top: 30px;
+  background-color: #333333;
+  color: #333333 !important;
 
+  &:hover{
+    color: #333333 !important;
+  }
+}
